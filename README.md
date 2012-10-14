@@ -1,2 +1,0 @@
-mantopanto.github.com
-=====================
