@@ -1,283 +1,365 @@
 <link rel="stylesheet" href="main.css" />
-<div class="info">
-    <h1>Fundraising Grader</h1>
-    <span>
-      Made with
-      <i class="fa fa-beer"></i>
-      by
-      <a href="http://www.idesignradthings.com">Ty Stelmach</a>
-      <div class="spoilers">
-        An app created to score your nonprofit's fundraising technique.</a> 
-      </div>
-    </span>
-  </div>
-  
-  
-  
-  <!-- Modal -info -->
-  <div class="container">
-  <div id="modal-3" class="modal" data-modal-effect="slide-top">
-    <div class="modal-content">
-      <h2 class="fs-title">Score Index</h2>
-      <h3 class="fs-subtitle">Getting the most out of your data</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      <input type="button" name="next" class="next action-button modal-close" value="Got it!">
-    </div>
-  </div>
-  </div>
-  
-  <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+<script>
+	var x = 1;
+	function add_a_row(){
+		if(x>=1){
+			var row = $("<tr id='appndd_tr'><td><input type='text'  name='k2_no' placeholder='No. Borang K2' required></td><td><input type='text'  name='k2_export' placeholder='Kuantiti Dieksport (kg)' required></td><td><input type='text'  name='k2_used' placeholder='Bahan Mentah Digunakan (kg)' required></td><td><input type='button' onclick='remove_row()' class='btn btn-wide btn-danger' value='Remove'/></td></tr>");
+		 row.append().prependTo("#appnd_row_table");
+		 x++;
+		}
+	}
+    function remove_row(){
+		$('#appndd_tr').remove();
+		x = 1;
+	}
+    function add_a_row_1(){
+		if(x>=1){
+			var row = $("<tr id='appndd_tr'><td><input type='text' style='width: 300px;' name='import_quantity_used' placeholder='Kuantiti Dibuat (kg) ' required></td><td><input  style='width: 300px;' type='text'  name='import_percentage' placeholder='Peratusan Bahan Mentah Digunakan ' required></td><td><input  type='button' onclick='remove_row_1()' class='btn btn-wide btn-danger' value='Remove'/></td></tr>");
+		 row.append().prependTo("#appnd_row_table_1");
+		 x++;
+		}
+	}
+    function remove_row_1(){
+		$('#appndd_tr').remove();
+		x = 1;
+	}
+    function add_a_row_2(){
+		if(x>=1){
+			var row = $("<tr id='appndd_tr'><td><input type='text' style='width: 200px;' name='k1_no' placeholder='No. Borang K1 ' required></td><td><input  style='width: 200px;' type='text'  name='import_date' placeholder='Tarikh Import ' required></td><td><input  style='width: 200px;' type='text'  name='import_quantity' placeholder='Kuantiti Diimport (kg) ' required></td><td><input  style='width: 200px;' type='text'  name='import_duti_paid' placeholder='Amaun Duti Dibayar (RM)' required></td><td><input  type='button' onclick='remove_row_2()' class='btn btn-wide btn-danger' value='Remove'/></td></tr>");
+		 row.append().prependTo("#appnd_row_table_2");
+		 x++;
+		}
+	}
+    function remove_row_2(){
+		$('#appndd_tr').remove();
+		x = 1;
+	}
+    function add_a_row_3(){
+		if(x>=1){
+			var row = $("<tr id='appndd_tr'><td><input type='text' style='width: 200px;' name='k1_no' placeholder='No. Borang K1 ' required></td><td><input  style='width: 200px;' type='text'  name='import_date' placeholder='Tarikh Import ' required></td><td><input  style='width: 200px;' type='text'  name='import_quantity' placeholder='Kuantiti Diimport (kg) ' required></td><td><input  style='width: 200px;' type='text'  name='import_duti_paid' placeholder='Amaun Duti Dibayar (RM)' required></td><td><input  type='button' onclick='remove_row_2()' class='btn btn-wide btn-danger' value='Remove'/></td></tr>");
+		 row.append().prependTo("#appnd_row_table_3");
+		 x++;
+		}
+	}
+    function remove_row_3(){
+		$('#appndd_tr').remove();
+		x = 1;
+	}
+    function add_a_row_4(){
+		if(x>=1){
+			var row = $("<tr id='appndd_tr'><td><input type='text' style='width: 200px;' name='k1_no' placeholder='No. Borang K1 ' required></td><td><input  style='width: 200px;' type='text'  name='import_date' placeholder='Tarikh Import ' required></td><td><input  style='width: 200px;' type='text'  name='import_quantity' placeholder='Kuantiti Diimport (kg) ' required></td><td><input  style='width: 200px;' type='text'  name='import_duti_paid' placeholder='Amaun Duti Dibayar (RM)' required></td><td><input  type='button' onclick='remove_row_2()' class='btn btn-wide btn-danger' value='Remove'/></td></tr>");
+		 row.append().prependTo("#appnd_row_table_4");
+		 x++;
+		}
+	}
+    function remove_row_4(){
+		$('#appndd_tr').remove();
+		x = 1;
+	}
+</script>
+</script>
+<h1 style="text-align: center;">Sistem Pengurusan Tuntutan KASTAM Negeri Sembilan</h1>
+<form id="msform">
+    <!-- progressbar -->
     <ul id="progressbar">
-      <li class="active">User Information</li>
-      <li>Aquisition</li>
-      <li>Cultivation</li>
-      <li>Cultivation2</li>
-      <li>Retention</li>
+      <li class="active">Permohonan</li>
+      <li>Tuntutan</li>
+      <li>Pembayaran Duti</li>
+      <li>Pengilangan</li>
+      <li>Pemeriksaan Borang</li>
+      <li>Meklumat Import</li>
+      <li>Maklumat Export</li>
+      <li>Surat Kemudahan</li>
+      
     </ul>
-  
-  
-  
-    <!-- USER INFORMATION FIELD SET --> 
+    <!-- fieldsets -->
     <fieldset>
-      <h2 class="fs-title">Basic Information</h2>
-      <h3 class="fs-subtitle">We just need some basic information to begin your scoring</h3>
-      <!-- Begin What's Your First Name Field -->
-          <div class="hs_firstname field hs-form-field">
-          
-            <label for="firstname-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What's your First Name? *</label>
-  
-            <input id="firstname-99a6d115-5e68-4355-a7d0-529207feb0b3_2983" name="firstname" required="required" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Please include your first name" >
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-      <!-- End What's Your First Name Field -->
-  
-      <!-- Begin What's Your Email Field -->
-          <div class="hs_email field hs-form-field">
-          
-            <label for="email-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What's your E-mail Address? *</label>
-  
-            <input id="email-99a6d115-5e68-4355-a7d0-529207feb0b3_2983" name="email" required="required" type="email" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid email address." >
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-      <!-- End What's Your Email Field -->
-  
-      <!-- Begin Total Number of Constituents in Your Database Field -->
-          <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database">
-          
-            <label for="edit-submitted-constituent-base-total-constituents total_number_of_constituents_in_your_database-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What's the Total Number of Constituents in your Database? *</label>
-  
-            <input id="edit-submitted-constituent-base-total-constituents" class="form-text hs-input" name="total_number_of_constituents_in_your_database" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number" >
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-  
-      <!-- End Total Number of Constituents in Your Database Field -->
-      <input type="button" data-page="1" name="next" class="next action-button" value="Next" />
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3"><i class="question-log fa fa-question-circle"></i> What Is This?</div>
+      <h2 class="fs-title">Pemohonan</h2>
+      <h3 class="fs-subtitle">Step 1</h3>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No Daftar Syarikat* (checking if company is exist)</h2>
+      <input type="text" style="width: 100%;" name="company_no" placeholder="No Daftar Syarikat" required>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Nama Syraikat*</h2>
+      <input type="text" style="width: 100%;" name="company_name" placeholder="Nama Syraikat" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Alamat Syarikat*</h2>
+      <input type="text" style="width: 100%;" name="company_address" placeholder="Alamat Syarikat" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Tuntutan bagi bulan dan tahun*</h2>
+      <input type="month" style="width: 100%;" id="claim_nomnt_year" name="claim_nomnt_year"  min="2021-01" value="2021-12">
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No.Pendaftaran Permohonan (selepas dokumen disemak lengkap)*</h2>
+      <input type="text" style="width: 100%;" id="company_id_claim" name="company_id_claim"  />
+      <br>
+      <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
-  
-  
-  
-    <!-- ACQUISITION FIELD SET -->  
     <fieldset>
-      <h2 class="fs-title">Acquisition of Donors</h2>
-      <h3 class="fs-subtitle">How have you been doing in acquiring donors?</h3>
-        <!-- Begin Total Number of Donors in Year 1 Field -->
-          <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_1 field hs-form-field" id="webform-component-acquisition--amount-1">
+        <h2 class="fs-title">Tuntutan</h2>
+        <h3 class="fs-subtitle">Step 2</h3>
+        <h2 style="text-align: left ;" class="fs-title">Jumlah Duti Telah Dibayar</h2>
+        <input type="text" style="width: 100%;" name="compnay_duti_paid" placeholder="Jumlah Duti Telah Dibayar" required>
+          <br>
+          <h2 style="text-align: left ;" class="fs-title">No.Resit (COR)</h2>
+          <input type="text" style="width: 100%;" name="receipt_import" placeholder="contoh (2020-050001171)" required>
+          <br>
+          <!--
+          <input type="text" style="width: 30%;" name="k2_no" placeholder="No. Borang K2" required>
           
-            <label for="edit-submitted-acquisition-amount-1 total_number_of_donors_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What was your number of total donors in year 1? *</label>
-  
-            <input id="edit-submitted-acquisition-amount-1" class="form-text hs-input" name="total_number_of_donors_in_year_1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-        <!-- End Total Number of Donors in Year 1 Field -->
-  
-        <!-- Begin Total Number of Donors in Year 2 Field -->
-          <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field" id="webform-component-acquisition--amount-2">
+          <input type="text" style="width: 30%;" name="k2_export" placeholder="Kuantiti Dieksport (kg)" required>
           
-            <label for="edit-submitted-acquisition-amount-2 total_number_of_donors_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What was your number of total donors in year 2? *</label>
-  
-            <input id="edit-submitted-acquisition-amount-2" class="form-text hs-input" name="total_number_of_donors_in_year_2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <!-- End Total Number of Donors in Year 2 Field -->
-  
-        <!-- Begin Calc of Total Number of Donors Fields -->
-        <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
-          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_donor_percent_change field hs-form-field">
-          
-            <label for="edit-submitted-acquisition-percent-change total_donor_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">Total Donors Percent Change</label>
-  
-            <input id="edit-submitted-acquisition-percent-change" class="form-text hs-input" name="total_donor_percent_change" readonly="readonly" size="60" maxlength="128" type="text" value="" placeholder="0">
-          </div>
-          <!-- End Calc of Total Number of Donors Fields -->
-      <input type="button" data-page="2" name="previous" class="previous action-button" value="Previous" />
-      <input type="button" data-page="2" name="next" class="next action-button" value="Next" />
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+          <input type="text" style="width: 30%;" name="k2_used" placeholder="Bahan Mentah Digunakan (kg)" required>
+          <input type="button" name="add" class="add" value="add" />
+          -->
+          <br>
+          <input onclick="add_a_row()" type="button"  class="add" value="Add New " />
+          <table class="table " id="appnd_row_table">
+            <thead>
+                <tr class="info">
+                    <th style="width: 25%;">No. Borang K2</th>
+                    <th style="width: 25%;">Kuantiti Dieksport (kg)</th>
+                    <th style="width: 25%;">Bahan Mentah Digunakan (kg)</th>
+                    <th style="width: 25%;"></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td style="width: 25%;"></td>
+                    <td style="width: 25%;"></td>
+                    <td style="width: 25%;"></td>
+                    <td style="width: 25%;"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Bayaran Duti</h2>
+      <h3 class="fs-subtitle">Step 3</h3>
+      <select name="keg_type" style="width: 100%;" placeholder="Pickup Date">
+        <option value="" disabled selected style="display: none;">Stesen Pemungut*</option>
+        <option value="B18">B18</option>
+        <option value="B19">B19</option>
+      </select>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No. Borang K1 / K9* (system checking if exist by k1 id)</h2>
+      <input type="text" style="width: 100%;" name="k1_no" placeholder="contoh (B18-1-050006819)" required>
+      <br>
+      
+      <h2 style="text-align: left ;" class="fs-title">Tarikh Import* (auto get from database if exist by k1 id)</h2>
+      <input type="date" style="width: 100%;" name="date_import"  required>
+      <br>
+      
+      <h2 style="text-align: left ;" class="fs-title">Kuantiti Diimport (kg)* (auto get from database if exist by k1 id)</h2>
+      <input type="text" style="width: 100%;" name="quantity_import" placeholder="contoh (17058)" required>
+      <br>
+      
+      <h2 style="text-align: left ;" class="fs-title">Amaun Duti Dibayar (RM) (Duti Import) (auto get from database if exist by k1 id)</h2>
+      <input type="text" style="width: 100%;" name="amount_import" placeholder="contoh (8161.9)" required>
+      <br>
+      
+      <h2 style="text-align: left ;" class="fs-title">Amaun Duti Dibayar (Duti Eksais) (auto get from database if exist by k1 id)</h2>
+      <input type="text" style="width: 100%;" name="eksais_import" placeholder="" required>
+      <br>
+     
+      <h2 style="text-align: left ;" class="fs-title">Duti Dibayar Seunit (RM/kg) (auto get from database if exist by k1 id)</h2>
+      <input type="text" style="width: 100%;" name="" placeholder="" required>
+      <br>
+     
+      <h2 style="text-align: left ;" class="fs-title">Tarikh Duti Dibayar (auto get from database if exist by k1 id)</h2>
+      <input type="date" style="width: 100%;" name="date_paid_import" placeholder="" required>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No.Resit (COR)</h2>
+      <input type="text" style="width: 100%;" name="receipt_import" placeholder="contoh (2020-050001171)" required>
+      
+      <br>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
-  
-  
-  
-    <!-- Cultivation FIELD SET -->  
     <fieldset>
-      <h2 class="fs-title">Cultivation and Nurturing your Donors</h2>
-      <h3 class="fs-subtitle">How have you been nurturing donors to get better donations?</h3>
-        <!-- Begin Average Gift Size in Year 1 Field -->
-          <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_1 field hs-form-field" id="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">
-          
-            <label for="edit-submitted-cultivation-amount-1 average_gift_size_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">What was your average gift size in year 1? *</label>
-  
-            <input id="edit-submitted-cultivation-amount-1" class="form-text hs-input" name="average_gift_size_in_year_1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <!-- End Average Gift Size in Year 1 Field -->
-  
-        <!-- Begin Average Gift Size in Year 2 Field -->
-          <div class="form-item webform-component webform-component-textfield hs_average_gift_size_in_year_2 field hs-form-field" id="webform-component-cultivation--amount-2">
-          
-            <label for="edit-submitted-cultivation-amount-2 average_gift_size_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">What was your average gift size in year 2? *</label>
-  
-            <input id="edit-submitted-cultivation-amount-2" class="form-text hs-input" name="average_gift_size_in_year_2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <!-- End Average Gift Size in Year 2 Field -->
-  
-        <!-- Begin Average Gift Size Perchent Change Field -->
-        <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
-          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_average_gift_size_percent_change field hs-form-field" id="webform-component-cultivation--percent-change1">
-          
-            <label for="edit-submitted-cultivation-percent-change1 average_gift_size_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_3256">Average Gift Size Percent Change</label>
-  
-            <input id="edit-submitted-cultivation-percent-change1" class="form-text hs-input" name="average_gift_size_percent_change" readonly="readonly" size="60" maxlength="128" type="text" value="" placeholder="0">
-          </div>
-          <!-- End Average Gift Size Perchent Change Field -->
-      <input type="button" data-page="3" name="previous" class="previous action-button" value="Previous" />
-      <input type="button" data-page="3" name="next" class="next action-button" value="Next" />
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+        <h2 class="fs-title">Pengilangan</h2>
+        <h3 class="fs-subtitle">Step 2</h3>
+        <h2 style="text-align: left ;" class="fs-title">Deskripsi Barang Siap*</h2>
+      <input type="text" style="width: 100%;" name="import_final_good" placeholder="contoh (Fire & Volume Control Damper)" required>
+      <br>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Kod Tarif*</h2>
+      <input type="text" style="width: 100%;" name="import_code_tarif" placeholder="contoh (8479.90.2000)" required>
+      <br>
+      <br>
+      <input onclick="add_a_row_1()" type="button"  class="add" value="Add New " />
+      <table class="table " id="appnd_row_table_1">
+        <thead>
+            <tr class="info">
+                <th style="width: 35%;">Kuantiti Dibuat (kg) </th>
+                <th style="width: 35%;">Peratusan Bahan Mentah Digunakan </th>
+                <th style="width: 40%;"></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td style="width: 35%;"></td>
+                <td style="width: 35%;"></td>
+                <td style="width: 40%;"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <br>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+      <fieldset>
+        <h2 class="fs-title">Pemeriksaan Borang</h2>
+        <h3 class="fs-subtitle">Step 5</h3>
+        <table style="border: 1px;">
+            <thead>
+                <tr>
+                    <td>BIL</td>
+                    <th scope="col">PERKARA / DOKUMEN SOKONGAN</th>
+                    <th scope="col">YA</th>
+                    <th scope="col">TIDAK</th>
+                    <th scope="col">CATATAN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Surat Permohonan  Syarikat <br><i>Application Letter</i> </td>
+                    <td><input type="checkbox" id="yes_box_1" name="yes_box_1" value="yes_box_1"><label for="yes_box_1"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_1" name="no_box_1" value="no_box_1"><label for="no_box_1"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_1"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Borang JKDM No. 2  <br><i>JKDM No.2 Form</i></td>
+                    <td><input type="checkbox" id="yes_box_2" name="yes_box_2" value="yes_box_2"><label for="yes_box_2"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_2" name="no_box_2" value="no_box_2"><label for="no_box_2"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_2"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Penyata Bank Syarikat <br><i>Company's Bank Statement</i></td>
+                    <td><input type="checkbox" id="yes_box_3" name="yes_box_3" value="yes_box_3"><label for="yes_box_3"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_3" name="no_box_3" value="no_box_3"><label for="no_box_3"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_3"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Surat Kelulusan Lengkap Dari Unit Drawback <br><i>Approval Letter from Drawback Unit</i> </td>
+                    <td><input type="checkbox" id="yes_box_4" name="yes_box_4" value="yes_box_4"><label for="yes_box_4"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_4" name="no_box_4" value="no_box_4"><label for="no_box_4"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_4"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Lampiran D Penyata Pengiraan Tuntutan <br><i>Claim Statement</i></td>
+                    <td><input type="checkbox" id="yes_box_5" name="yes_box_5" value="yes_box_5"><label for="yes_box_5"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_5" name="no_box_5" value="no_box_5"><label for="no_box_5"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_5"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Borang Kastam No.1 (K1) / Borang Kastam No.9 (K9) / Borang Eksais No.7 (E7) dan Resit Rasmi<br><i>Customs Form No.1 (K1) / Customs Form No.9 (K9) / Excise Form No.7 (E7) and Official Receipt</i></td>
+                    <td><input type="checkbox" id="yes_box_6" name="yes_box_6" value="yes_box_6"><label for="yes_box_6"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_6" name="no_box_6" value="no_box_6"><label for="no_box_6"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_6"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>Invois Semasa Pengimportan <br><i>Invoice Related to Importation</i></td>
+                    <td><input type="checkbox" id="yes_box_7" name="yes_box_7" value="yes_box_7"><label for="yes_box_7"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_7" name="no_box_7" value="no_box_7"><label for="no_box_7"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_7"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>Borang Kastam No. 2 / Borang Eksais No.8 (E8) / Borang Pengesahan Penghantaran dan Penerimaan Barang (Lampiran J)<br><i>Customs Form No.2 / Excise Form No.8 (E8) / Goods Delivery and Acceptance Form (Lampiran J)</i></td>
+                    <td><input type="checkbox" id="yes_box_8" name="yes_box_8" value="yes_box_8"><label for="yes_box_8"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_8" name="no_box_8" value="no_box_8"><label for="no_box_8"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_8"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Invois Semasa Pengeksportan <br><i>Invoice Related to Exportation</i></td>
+                    <td><input type="checkbox" id="yes_box_9" name="yes_box_9" value="yes_box_9"><label for="yes_box_9"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_9" name="no_box_9" value="no_box_9"><label for="no_box_9"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_9"></textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>Packing List / Delivery Order</td>
+                    <td><input type="checkbox" id="yes_box_10" name="yes_box_10" value="yes_box_10"><label for="yes_box_10"> Ya</label><br></td>
+                    <td><input type="checkbox" id="no_box_10" name="no_box_10" value="no_box_10"><label for="no_box_10"> Tidak</label><br></td>
+                    <td><textarea name="Text_box_10"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+      <fieldset>
+        <h2 class="fs-title">Maklumat Import</h2>
+        <h3 class="fs-subtitle">Step 6</h3>
+        <br>
+      <input onclick="add_a_row_2()" type="button"  class="add" value="Add New " />
+      <table class="table " id="appnd_row_table_2">
+        <thead>
+            <tr class="info">
+                <th style="width: 20%;">No. Borang K1 </th>
+                <th style="width: 20%;">Tarikh Import </th>
+                <th style="width: 20%;">Kuantiti Diimport (kg)</th>
+                <th style="width: 20%;">Amaun Duti Dibayar (RM)</th>
+                <th style="width: 20%;"></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td style="width: 20%;"></td>
+                <td style="width: 20%;"></td>
+                <td style="width: 20%;"></td>
+                <td style="width: 20%;"></td>
+                <td style="width: 20%;"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <br>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Maklumat Eksport</h2>
+      <h3 class="fs-subtitle">Step 7</h3>
+      <br>
+      <i>need more discussion</i>
+      <!--need more discussion-->
+        <br>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
-  
-  
-  
-    <!-- Cultivation2 FIELD SET --> 
     <fieldset>
-      <h2 class="fs-title">Total Cultivation in Donation</h2>
-      <h3 class="fs-subtitle">Let's talk about your donations as a whole</h3>
-                <!-- Begin Total Giving In Year 1 Field -->
-          <div class="form-item webform-component webform-component-textfield" id="webform-component-cultivation--amount-3 hs_total_giving_in_year_1 field hs-form-field">
-          
-            <label for=" edit-submitted-cultivation-amount-3 total_giving_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">What was your total giving in Year 1? *</label>
-  
-            <input id="edit-submitted-cultivation-amount-3" class="form-text hs-input" name="total_giving_in_year_1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <!-- End Total Giving In Year 1 Field -->
-  
-        <!-- Begin Total Giving In Year 2 Field -->
-          <div class="form-item webform-component webform-component-textfield hs_total_giving_in_year_2 field hs-form-field" id="webform-component-cultivation--amount-4"> 
-          
-            <label for=" edit-submitted-cultivation-amount-4 total_giving_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">What was your total giving in Year 2? *</label>
-  
-            <input id="edit-submitted-cultivation-amount-4" class="form-text hs-input" name="total_giving_in_year_2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-          <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          
-          <!-- End Total Giving In Year 2 Field -->
-  
-        <!-- Begin Average Gift Size Percent Change Field 2 -->
-        <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
-          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field" id="webform-component-cultivation--percent-change2">
-  
-            <label for=" edit-submitted-cultivation-percent-change2 total_giving_percent_change-99a6d115-5e68-4355-a7d0-529207feb0b3_4902">Average Gift Size Percent Change</label>
-  
-            <input id="edit-submitted-cultivation-percent-change2" class="form-text hs-input" name="total_giving_percent_change" readonly="readonly" size="60" maxlength="128" type="text" value="" placeholder="0">
-          </div>
-          <!-- End Average Gift Size Percent Change Field 2 -->
-      <input type="button" data-page="4" name="previous" class="previous action-button" value="Previous" />
-      <input type="button" data-page="4" name="next" class="next action-button" value="Next" />
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+      <h2 class="fs-title">Surat Kemudahan</h2>
+      <h3 class="fs-subtitle">Step 8</h3>
+      
+      <br>
+      <i>need more discussion</i>
+      <!--need more discussion-->
+        <br>
+
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" id="form-submit" />
     </fieldset>
+  </form>
+  <!-- jQuery -->
+  <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+  <!-- jQuery easing plugin -->
+  <script src="easing.js" type="text/javascript"></script>
   
-  
-  
-    <!-- RETENTION FIELD SET -->  
-    <fieldset>
-      <h2 class="fs-title">Retention of your donors</h2>
-      <h3 class="fs-subtitle">How long can you keep your donors and their donations?</h3>
-          <!-- Begin Total Number of Donors Who Gave in Year 1 Field -->
-            <div class="form-item webform-component webform-component-textfield hs_number_of_donors_in_year_1 field hs-form-field" id="webform-component-retention--amount-1"> 
-          
-            <label for=" edit-submitted-retention-amount-1 number_of_donors_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What was your total number of donors who gave in year 1? *</label>
-  
-            <input id="edit-submitted-retention-amount-1" class="form-text hs-input" name="number_of_donors_in_year_1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-            </div>
-          <!-- End Total Number of Donors Who Gave in Year 1 Field-->
-  
-  
-          <!-- Begin Total Number of Donors Who Gave in Year 1 and Year 2 Field -->
-            <div class="form-item webform-component webform-component-textfield" id="webform-component-retention--amount-2 hs_number_of_year_1_donors_who_also_gave_in_year_2 field hs-form-field">
-          
-            <label for=" edit-submitted-retention-amount-2 number_of_year_1_donors_who_also_gave_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">What was your total number of donors who gave in year 1 that also gave in year 2? *</label>
-  
-            <input id="edit-submitted-retention-amount-2" class="form-text hs-input" name="number_of_year_1_donors_who_also_gave_in_year_2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
-            
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-            </div>
-          <!-- End Total Number of Donors Who Gave in Year 1 and Year 2 Field -->
-  
-          <!-- Begin Retention Rate Percent -->
-            <div class="form-item webform-component webform-component-textfield" id="webform-component-retention--percent-change field hs-form-field">
-          
-            <label for="edit-submitted-retention-percent-change">Retention Rate</label>
-  
-           <input id="edit-submitted-retention-percent-change" class="form-text hs-input" name="retention_rate_percent" readonly="readonly" size="60" maxlength="128" type="text" value="" placeholder="0">
-            
-            <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-            </div>
-  
-          <!-- End Retention Rate Percent -->
-  
-  
-          <!-- Begin Final Calc -->
-            <div class="form-item webform-component webform-component-textfield hs_fundraising_400_index field hs-form-field" id="webform-component-final-grade--grade">
-  
-            <label for=" fundraising_400_index-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">Fundraising 400 Index Score</label>
-  
-            <input id="edit-submitted-final-grade-grade" class="form-text hs-input" name="fundraising_400_index" readonly="readonly" size="60" maxlength="128" type="text" value="" placeholder="0">
-            </div>
-          <!-- End Final Calc -->
-      <input type="button" data-page="5" name="previous" class="previous action-button" value="Previous" />
-      <input id="submit" class="hs-button primary large action-button next" type="submit" value="Submit">
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
-  </fieldset>
-  
-    <fieldset>
-      <h2 class="fs-title">It's on the way!</h2>
-      <h3 class="fs-subtitle">Thank you for trying out our marketing grader, please go check your email for your fundraising report card and some helpful tips to improve it!</h3>
-      <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
-    </fieldset>
-  
-    <script src="main.js"></script>
+<script src="main.js"></script>
