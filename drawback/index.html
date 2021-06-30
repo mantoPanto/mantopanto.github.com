@@ -57,15 +57,15 @@
 		x = 1;
 	}
 </script>
-</script>
-<h1 style="text-align: center;">Sistem Pengurusan Tuntutan KASTAM Negeri Sembilan</h1>
-<form id="msform">
+<h1 style="text-align: center;">Pemohonan Tuntutan Pulang Balik Seksyen 99, Akta Kastam 1967</h1>
+<div id="msform">
     <!-- progressbar -->
     <ul id="progressbar">
-      <li class="active">Permohonan</li>
-      <li>Tuntutan</li>
+      <li class="active">Maklumat Permohonan</li>
+      <li>Maklumat Syarikat</li>
+      <li>Maklumat Tuntutan oleh Syarikat</li>
       <li>Pembayaran Duti</li>
-      <li>Pengilangan</li>
+      <li>Maklumat Pengilangan</li>
       <li>Pemeriksaan Borang</li>
       <li>Meklumat Import</li>
       <li>Maklumat Export</li>
@@ -74,49 +74,59 @@
     </ul>
     <!-- fieldsets -->
     <fieldset>
-      <h2 class="fs-title">Pemohonan</h2>
-      <h3 class="fs-subtitle">Step 1</h3>
+      <h2 class="fs-title">Maklumat Pemohonan</h2>
+      <h3 class="fs-subtitle">Peringkat ke-1</h3>
       <br>
-      <h2 style="text-align: left ;" class="fs-title">No Daftar Syarikat* (checking if company is exist)</h2>
-      <input type="text" style="width: 100%;" name="company_no" placeholder="No Daftar Syarikat" required>
+      <h2 style="text-align: left ;" class="fs-title">Nama Pemohon*</h2>
+      <input type="text" style="width: 100%;" name="reg_name" placeholder="Nama Pemohon" required>
       <br>
-      <h2 style="text-align: left ;" class="fs-title">Nama Syraikat*</h2>
+      <h2 style="text-align: left ;" class="fs-title">No. Kad Pengenalan Pemohon*</h2>
+      <input type="text" style="width: 100%;" name="reg_noic" placeholder="111111223333" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Jawatan Pemohon*</h2>
+      <input type="text" style="width: 100%;" name="reg_title" placeholder="Jawatan Pemohon" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No. Telepon Pejabat Pemohon*</h2>
+      <input type="text" style="width: 100%;" name="reg_tel_office"  placeholder="061112222" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">No. Telepon Bimbit Pemohon*</h2>
+      <input type="text" style="width: 100%;"  name="reg_tel_handphone" placeholder="0123334444" />
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Alamat Email*</h2>
+      <input type="email" style="width: 100%;"  name="reg_email" placeholder="admin@xxx.com" />
+      <br>
+      <input type="button" name="next" class="next action-button" value="Seterusnya" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Maklumat Syarikat</h2>
+      <h3 class="fs-subtitle">Peringkat ke-2</h3>
+      <br>
+      <h2 style="text-align: left ;" class="fs-title">Nama Syarikat*</h2>
       <input type="text" style="width: 100%;" name="company_name" placeholder="Nama Syraikat" />
-      <br>
+      <br>      
       <h2 style="text-align: left ;" class="fs-title">Alamat Syarikat*</h2>
       <input type="text" style="width: 100%;" name="company_address" placeholder="Alamat Syarikat" />
       <br>
-      <h2 style="text-align: left ;" class="fs-title">Tuntutan bagi bulan dan tahun*</h2>
-      <input type="month" style="width: 100%;" id="claim_nomnt_year" name="claim_nomnt_year"  min="2021-01" value="2021-12">
+      <h2 style="text-align: left ;" class="fs-title">Alamat Kilang Syarikat* (Jika Berlainan dari alamat diatas)</h2>
+      <input type="text" style="width: 100%;" name="company_address" placeholder="Alamat Syarikat" />
       <br>
-      <h2 style="text-align: left ;" class="fs-title">No.Pendaftaran Permohonan (selepas dokumen disemak lengkap)*</h2>
-      <input type="text" style="width: 100%;" id="company_id_claim" name="company_id_claim"  />
+      <h2 style="text-align: left ;" class="fs-title">No Daftar Syarikat Dengan SSM*</h2>
+      <input type="text" style="width: 100%;" name="company_no" placeholder="No Daftar Syarikat" required>
       <br>
-      <input type="button" name="next" class="next action-button" value="Next" />
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Seterusnya" />
     </fieldset>
     <fieldset>
-        <h2 class="fs-title">Tuntutan</h2>
-        <h3 class="fs-subtitle">Step 2</h3>
-        <h2 style="text-align: left ;" class="fs-title">Jumlah Duti Telah Dibayar</h2>
-        <input type="text" style="width: 100%;" name="compnay_duti_paid" placeholder="Jumlah Duti Telah Dibayar" required>
-          <br>
-          <h2 style="text-align: left ;" class="fs-title">No.Resit (COR)</h2>
-          <input type="text" style="width: 100%;" name="receipt_import" placeholder="contoh (2020-050001171)" required>
-          <br>
-          <!--
-          <input type="text" style="width: 30%;" name="k2_no" placeholder="No. Borang K2" required>
-          
-          <input type="text" style="width: 30%;" name="k2_export" placeholder="Kuantiti Dieksport (kg)" required>
-          
-          <input type="text" style="width: 30%;" name="k2_used" placeholder="Bahan Mentah Digunakan (kg)" required>
-          <input type="button" name="add" class="add" value="add" />
-          -->
+        <h2 class="fs-title">Maklumat Tuntutan oleh Syarikat (<i>dalam excel terletak last skali-perlu dibincangkan</i>)</h2>
+        <h3 class="fs-subtitle">Peringkat ke-3</h3>
+        <h2 style="text-align: left ;" class="fs-title">Kuantity Bahan Mentah Yang Digunakan*</h2>
+        
           <br>
           <input onclick="add_a_row()" type="button"  class="add" value="Add New " />
           <table class="table " id="appnd_row_table">
             <thead>
                 <tr class="info">
-                    <th style="width: 25%;">No. Borang K2</th>
+                    <th style="width: 25%;"><i>No. Borang K2</i></th>
                     <th style="width: 25%;">Kuantiti Dieksport (kg)</th>
                     <th style="width: 25%;">Bahan Mentah Digunakan (kg)</th>
                     <th style="width: 25%;"></th>
@@ -134,55 +144,53 @@
             </tbody>
         </table>
         <br>
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next action-button" value="Next" />
+        <input type="button" name="previous" class="previous action-button" value="Kembali" />
+        <input type="button" name="next" class="next action-button" value="Seterusnya" />
       </fieldset>
     <fieldset>
-      <h2 class="fs-title">Bayaran Duti</h2>
-      <h3 class="fs-subtitle">Step 3</h3>
+      <h2 class="fs-title">Pembayaran Duti</h2>
+      <h3 class="fs-subtitle">Peringkat ke-4</h3>
       <select name="keg_type" style="width: 100%;" placeholder="Pickup Date">
         <option value="" disabled selected style="display: none;">Stesen Pemungut*</option>
         <option value="B18">B18</option>
         <option value="B19">B19</option>
       </select>
       <br>
-      <h2 style="text-align: left ;" class="fs-title">No. Borang K1 / K9* (system checking if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">No. Borang K1 / K9* </h2>
       <input type="text" style="width: 100%;" name="k1_no" placeholder="contoh (B18-1-050006819)" required>
       <br>
       
-      <h2 style="text-align: left ;" class="fs-title">Tarikh Import* (auto get from database if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">Tarikh Import*</h2>
       <input type="date" style="width: 100%;" name="date_import"  required>
       <br>
       
-      <h2 style="text-align: left ;" class="fs-title">Kuantiti Diimport (kg)* (auto get from database if exist by k1 id)</h2>
-      <input type="text" style="width: 100%;" name="quantity_import" placeholder="contoh (17058)" required>
-      <br>
-      
-      <h2 style="text-align: left ;" class="fs-title">Amaun Duti Dibayar (RM) (Duti Import) (auto get from database if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">Jumlah Duti Dibayar* (RM) (Duti Import) </h2>
       <input type="text" style="width: 100%;" name="amount_import" placeholder="contoh (8161.9)" required>
       <br>
       
-      <h2 style="text-align: left ;" class="fs-title">Amaun Duti Dibayar (Duti Eksais) (auto get from database if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">Jumlah Duti Dibayar* (Duti Eksais) </h2>
       <input type="text" style="width: 100%;" name="eksais_import" placeholder="" required>
       <br>
      
-      <h2 style="text-align: left ;" class="fs-title">Duti Dibayar Seunit (RM/kg) (auto get from database if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">Jumlah Duti Dibayar* (RM) </h2>
       <input type="text" style="width: 100%;" name="" placeholder="" required>
       <br>
      
-      <h2 style="text-align: left ;" class="fs-title">Tarikh Duti Dibayar (auto get from database if exist by k1 id)</h2>
+      <h2 style="text-align: left ;" class="fs-title">Tarikh Duti Dibayar* </h2>
       <input type="date" style="width: 100%;" name="date_paid_import" placeholder="" required>
       <br>
-      <h2 style="text-align: left ;" class="fs-title">No.Resit (COR)</h2>
+      <h2 style="text-align: left ;" class="fs-title">No.Resit* (COR)</h2>
       <input type="text" style="width: 100%;" name="receipt_import" placeholder="contoh (2020-050001171)" required>
       
       <br>
-      <input type="button" name="previous" class="previous action-button" value="Previous" />
-      <input type="button" name="next" class="next action-button" value="Next" />
+      <input type="button" style="float: left;" value="Tambah" />
+      <br>
+      <input type="button" name="previous" class="previous action-button" value="Kembali" />
+      <input type="button" name="next" class="next action-button" value="Seterusnya" />
     </fieldset>
     <fieldset>
-        <h2 class="fs-title">Pengilangan</h2>
-        <h3 class="fs-subtitle">Step 2</h3>
+        <h2 class="fs-title">Maklumat Pengilangan</h2>
+        <h3 class="fs-subtitle">Peringkat ke-5</h3>
         <h2 style="text-align: left ;" class="fs-title">Deskripsi Barang Siap*</h2>
       <input type="text" style="width: 100%;" name="import_final_good" placeholder="contoh (Fire & Volume Control Damper)" required>
       <br>
@@ -356,7 +364,7 @@
       <input type="button" name="previous" class="previous action-button" value="Previous" />
       <input type="submit" name="submit" class="submit action-button" value="Submit" id="form-submit" />
     </fieldset>
-  </form>
+  </div>
   <!-- jQuery -->
   <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
   <!-- jQuery easing plugin -->
